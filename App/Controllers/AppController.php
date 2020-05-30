@@ -51,6 +51,21 @@ class AppController extends Action {
 		
 	}
 
+	public function delete_tweet() {
+
+		$this->validaAutenticacao();
+
+		$tweet = Container::getModel('Tweet');
+
+		$tweet->__set('id', $_POST['tweet_id']);
+
+		$tweet->delete_tweet_post();
+
+		header('Location: /timeline');
+		// echo $_POST['tweet_id'];
+		// $this->render('test');
+	}
+
 	public function validaAutenticacao() {
 
 		session_start();

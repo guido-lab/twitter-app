@@ -81,10 +81,12 @@
 				<div class="row tweet">
 					<div class="col">
 						<p><strong><?=$tweet['nome']?></strong> <small><span class="text text-muted">- <?=$tweet['data']?></span></small></p>
+						<!-- <p><?=$tweet['id']?></p> -->
 						<p><?=$tweet['tweet']?></p>
 						<br />
 						<?php if($tweet['id_usuario'] == $_SESSION['id']) { ?>
-							<form>
+							<form method="post" action="delete_tweet">
+								<input type="hidden" value="<?=$tweet['id']?>" name="tweet_id" id="exampleFormControlTextarea1" ></input>
 								<div class="col d-flex justify-content-end">
 									<button type="submit" class="btn btn-danger"><small>Remover</small></button>
 								</div>
