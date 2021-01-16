@@ -1,8 +1,10 @@
 # twitter-app
 ## This is a Twitter Blog
 
-Step1: Install PHP in your computer. 
-Step2: Install PHP Composer. 
+Step1: Install PHP in your computer
+
+Step2: Install PHP Composer
+
 Step3: Open termial to (Bash) to folder project (tweet_clone) and run
 ```bash
 $ composer install
